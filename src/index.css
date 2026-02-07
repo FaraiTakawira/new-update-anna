@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brewhaus Color Palette */
+    --background: 42 44% 91%;
+    --foreground: 152 43% 15%;
+
+    --card: 42 44% 95%;
+    --card-foreground: 152 43% 15%;
+
+    --popover: 42 44% 95%;
+    --popover-foreground: 152 43% 15%;
+
+    --primary: 152 43% 18%;
+    --primary-foreground: 42 44% 91%;
+
+    --secondary: 42 44% 88%;
+    --secondary-foreground: 152 43% 15%;
+
+    --muted: 42 30% 85%;
+    --muted-foreground: 152 20% 40%;
+
+    --accent: 42 55% 50%;
+    --accent-foreground: 152 43% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 42 30% 80%;
+    --input: 42 30% 80%;
+    --ring: 152 43% 18%;
+
+    --radius: 0.5rem;
+
+    /* Custom Brewhaus tokens */
+    --cream: 42 44% 91%;
+    --cream-light: 42 44% 95%;
+    --forest-green: 152 43% 18%;
+    --forest-green-dark: 152 43% 12%;
+    --gold: 42 55% 50%;
+    --gold-muted: 42 40% 60%;
+    
+    /* Sidebar tokens */
+    --sidebar-background: 152 43% 18%;
+    --sidebar-foreground: 42 44% 91%;
+    --sidebar-primary: 42 55% 50%;
+    --sidebar-primary-foreground: 152 43% 15%;
+    --sidebar-accent: 152 43% 25%;
+    --sidebar-accent-foreground: 42 44% 91%;
+    --sidebar-border: 152 43% 25%;
+    --sidebar-ring: 42 55% 50%;
+  }
+
+  .dark {
+    --background: 152 43% 8%;
+    --foreground: 42 44% 91%;
+
+    --card: 152 43% 12%;
+    --card-foreground: 42 44% 91%;
+
+    --popover: 152 43% 12%;
+    --popover-foreground: 42 44% 91%;
+
+    --primary: 42 44% 91%;
+    --primary-foreground: 152 43% 15%;
+
+    --secondary: 152 43% 18%;
+    --secondary-foreground: 42 44% 91%;
+
+    --muted: 152 30% 20%;
+    --muted-foreground: 42 30% 70%;
+
+    --accent: 42 55% 50%;
+    --accent-foreground: 152 43% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 42 44% 91%;
+
+    --border: 152 30% 25%;
+    --input: 152 30% 25%;
+    --ring: 42 44% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .heading-display {
+    @apply font-serif text-primary;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .heading-display-italic {
+    @apply font-serif text-primary italic;
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  /* Marquee animation */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* WhatsApp wave animation */
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  /* Scroll animations */
+  @keyframes scroll-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .scroll-fade-in {
+    animation: scroll-fade-in 0.8s ease-out forwards;
+  }
+
+  .scroll-scale-in {
+    animation: scroll-scale-in 0.6s ease-out forwards;
+  }
+}

@@ -23,7 +23,7 @@ const categories = [
 // Awards data
 const awards = [
   {
-    title: "Wenner Kaapse Wynland Fenominaal  Vrou Entrepreneur 2024",
+    title: "Wenner Kaapse Wynland Distriksmunisipaliteit Fenominale Vroue Entrepreneur van die Jaar",
     organization: "Kaapse Wynland",
     icon: Trophy,
     color: "text-purple-600",
@@ -39,7 +39,7 @@ const awards = [
     year: "2024"
   },
     {
-    title: "Semi-Finalis AfriForum 2024",
+    title: "Semi-Finalis AfriForum Sakenetwerk Entrepreneur van die Jaar ",
     organization: "AfriForum",
     icon: Medal,
     color: "text-amber-600",

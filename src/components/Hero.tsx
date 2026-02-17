@@ -14,9 +14,9 @@ const Hero = () => {
   transition={{ duration: 0.8, delay: 0.2 }}
   className="font-display text-4xl md:text-6xl lg:text-8xl text-cream leading-tight italic"
 >
-  <span className="text-3xl md:text-5xl lg:text-7xl">Ons</span> koffie 
-  <span className="text-4xl md:text-6xl lg:text-7xl mx-2">|</span> 
-  Plaaslik. <br/>Doelgedrewe. Met sorg verpak.
+  <span className="text-4xl md:text-5xl lg:text-7xl"></span> 
+  <span className="text-4xl md:text-6xl lg:text-7xl mx-2"></span> 
+  Ons koffie  | Plaaslik. <br/>Doelgedrewe. Met sorg verpak.
 </motion.h1>
 
 

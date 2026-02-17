@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import newsBlankets from "@/assets/news-blankets.jpg";
 import newsBag from "@/assets/news-bag.jpg";
 import newsTeam from "@/assets/news-team.jpg";
-import newsArt from "@/assets/news-art.jpg";
+// import newsArt from "@/assets/news-art.jpg";
 import blindArtVideo from "@/assets/kuns-vi.mp4"; // replace with your video path
 
 // Import art images
@@ -79,25 +79,37 @@ const News = () => {
             </motion.div>
 
             {/* Image Grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 md:mb-16"
-            >
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <img src={newsBlankets} alt="Kleurvolle komberse" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <img src={newsBag} alt="ANNABeleef sak" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <img src={newsTeam} alt="Span met komberse" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="rounded-2xl overflow-hidden aspect-square">
-                <img src={newsArt} alt="Kuns by ANNABeleef" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-            </motion.div>
+        <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 md:mb-16"
+>
+  <div className="rounded-2xl overflow-hidden aspect-square">
+    <img
+      src={newsBlankets}
+      alt="Kleurvolle komberse"
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="rounded-2xl overflow-hidden aspect-square">
+    <img
+      src={newsBag}
+      alt="ANNABeleef sak"
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <div className="rounded-2xl overflow-hidden aspect-square">
+    <img
+      src={newsTeam}
+      alt="Span met komberse"
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+</motion.div>
+
 
             {/* NEW ART GALLERY SECTION - 6 IMAGES */}
             <motion.div
@@ -345,140 +357,7 @@ const News = () => {
               </div>
             </motion.div>
 
-{/* ANNABeleef Heritage Teaser with Read More */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7 }}
-  className="mb-16 md:mb-24 bg-primary/5 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto"
->
-  <div className="space-y-4">
-    <h2 className="font-serif text-2xl md:text-3xl text-primary mb-2 text-center">
-      📢 ANNABeleef – Part of Worcester’s Rich Heritage
-    </h2>
 
-    {/* Teaser */}
-    <p className="text-primary/90 text-lg md:text-xl leading-relaxed">
-      ANNABeleef is not just a coffee shop but also a piece of Worcester’s profound history. 🌍 Here’s a fascinating piece of archival information that tells the story of the origins of the Old Gaol, the site where ANNA is located today.
-    </p>
-
-    <p className="text-primary/80 italic">
-      Read more below about how Worcester’s foundation began in 1818 – and discover the story of an old wine cellar that later became the 'Old Gaol', now transformed into something truly unique!
-    </p>
-
-    {/* Read More Button */}
-    <div className="text-center">
-      <button
-        onClick={() => {
-          const content = document.getElementById("heritage-full-content");
-          content.classList.toggle("hidden");
-        }}
-        className="bg-gold text-primary px-6 py-2 rounded-full font-medium hover:bg-gold/90 transition-colors active:scale-95"
-      >
-        Read More
-      </button>
-    </div>
-
-    {/* Full Content Hidden by Default */}
-    <div id="heritage-full-content" className="hidden mt-6 space-y-4 text-primary/90 leading-relaxed">
-      <p>PART II: PREPARATIONS FOR THE FOUNDING OF WORCESTER 1818 – 1820</p>
-      <p>📜 Excerpt:</p>
-      <p>On 19 December 1818, Barend Johannes Burger sold the farm “De Langerug, located on the Breede River,” to the Cape government.</p>
-      <p>On 10 January 1819, Governor Lord Charles Somerset and his party visited the farm to assess its suitability for the new town, Worcester. It is likely that they inspected all the buildings on the farm that day – including the old wine cellar, which would later become known as the 'Old Gaol'.</p>
-      <p>In 1819, the Deputy Landdros of Worcester, Jacob Frederik van de Graaff, took up residence in the old main homestead of ‘De-Langerug-gelegen-aan-het-Breede-Rivier’, and in 1820, he began making the necessary arrangements to set up the Old Wine Cellar as a gaol. On 5 March 1821, the gaol was fully established.</p>
-      <p>3 November 1820: Jacob van de Graaff Requests Permission to Establish a Gaol<br />
-      On 3 November 1820, Jacob van de Graaff requested permission for “the immediate construction of a prison with the necessary apartments for the schout and judicial officers,” as the lack of such a building caused “justice to suffer greatly.”</p>
-      <p>5 March 1821: ‘Old Gaol’ is Fully Established<br />
-      On 5 March 1821, at the first meeting of Landdros Charles Trappes with the first heemrade, Pieter de Vos of ‘Buffelskraal’ in the Hex Valley and Carel Stephanus Erasmus of ‘Nonna’ at Overhex, it was recorded in the minutes that the prison was “visiteur” (i.e., ‘visitable,’ meaning ‘already established’). The gaol was set up in the original main section of the old wine cellar as follows:
-      <ul className="list-disc pl-6 mt-2">
-        <li>One large hall section that could also serve as a hospital</li>
-        <li>A kitchen area in the middle</li>
-        <li>Three small detention cells</li>
-      </ul>
-      The rear wing, extended in 1820/1821, contained the following:
-      <ul className="list-disc pl-6 mt-2">
-        <li>A living room for the ‘schout’ (i.e., ‘guard’ or ‘overseer’)</li>
-        <li>A living room at the very end for the ‘judicial officers’ (i.e., the ‘bailiff’)</li>
-      </ul>
-      </p>
-      <p>12 June 1821: Benches Installed in the ‘Old Gaol’<br />
-      On 12 June 1821, it was recorded that “a British (‘plank bench’) has been installed in the prison here, on which the prisoners can lie – as the prisoners cannot endure the cold from lying on the ground.”</p>
-      <p>From 5 March 1821 until 26 November 1861, the ‘Old Gaol’ was used as a prison, after which the ‘New Gaol’ was commissioned on 26 November 1861 at the top of Russell Street (at the Russell and Somerset Street intersection).</p>
-      <p>From 1821 to 1893, the Landdros of Worcester, in his dual capacity as Landdros and Civil Commissioner, was responsible for the maintenance of the ‘Old Gaol.’</p>
-      <p>It is unknown exactly what the ‘Old Gaol’ was used for from 26 November 1861 until 1910, but it can possibly be assumed that it was still used for ‘prison purposes,’ such as housing for a prison warden, prison overseer, or other prison personnel, and so forth.</p>
-      <p>Today, this site is home to ANNABeleef, a space full of culture, coffee, and history that writes new stories while honoring the old ones. ☕ Come visit and experience it for yourself!</p>
-      <p>Compiled by: Councillor Dr Dr JULIAN KRITZINGER</p>
-    </div>
-  </div>
-</motion.div>
-{/* ANNABeleef Heritage Teaser - Part I */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.7 }}
-  className="mb-16 md:mb-24 bg-primary/5 rounded-3xl p-6 md:p-10 max-w-5xl mx-auto"
->
-  <div className="space-y-4">
-    <h2 className="font-serif text-2xl md:text-3xl text-primary mb-2 text-center">
-      🌻 ANNABeleef: Where Heritage and Community Meet 🌻
-    </h2>
-
-    {/* Teaser */}
-    <p className="text-primary/90 text-lg md:text-xl leading-relaxed">
-      ANNABeleef is more than just a coffee and gift shop; it is a place where Worcester’s rich history and our passion for the community converge. Located in the iconic "Old Gaol" building, our shop boasts a history that tells Worcester’s agricultural and community story across decades.
-    </p>
-
-    <p className="text-primary/80 italic">
-      PART VI: WORCESTER AGRICULTURAL SOCIETY 1910 – 1971. Read more below for fascinating historical details.
-    </p>
-
-    {/* Read More Button */}
-    <div className="text-center">
-      <button
-        onClick={() => {
-          const content = document.getElementById("heritage-part1-full");
-          content.classList.toggle("hidden");
-        }}
-        className="bg-gold text-primary px-6 py-2 rounded-full font-medium hover:bg-gold/90 transition-colors active:scale-95"
-      >
-        Read More
-      </button>
-    </div>
-
-    {/* Full Content Hidden by Default */}
-    <div id="heritage-part1-full" className="hidden mt-6 space-y-4 text-primary/90 leading-relaxed">
-      <p>INTRODUCTION</p>
-      <p>
-        From 1911 to 1943, the ‘Old Gaol’ was used as the residence of the Secretary of the Worcester Agricultural Society.
-      </p>
-      <p>
-        In the 1920s, the old main homestead of ‘De-Langerug-gelegen-aan-het-Breede-Rivier’ was demolished. At that time, this homestead was known as ‘Oude Post’.
-      </p>
-      <p>
-        From 1943 to 1946, the ‘Old Gaol’ served as the administrative offices of the Worcester Italian Prisoner-of-War Camp. From 1946 to 1971, the ‘Old Gaol’ was used as a storage facility, later as a meeting place, and eventually as a clubhouse for the Worcester Agricultural Society.
-      </p>
-      <p>November 1909: Cape Colonial Parliament Passes Bill for Transfer of Portion of Drostdy Grounds to the Worcester Agricultural Society</p>
-      <p>In November 1909, both houses of the Cape Parliament passed a bill stipulating that plots E and F of the Drostdy grounds be allocated to the Worcester Agricultural Society for the purpose of holding agricultural exhibitions.</p>
-      <p>18 February 1910: Deed of Grant for Portion of Drostdy Grounds Signed by Governor Sir Walter Hely-Hutchinson</p>
-      <p>The deed of grant was signed on 18 February 1910 by the Cape Governor, Sir Walter Hely-Hutchinson, transferring land measuring 4 morgen, 186 square roods, and 42 square feet to the Worcester Agricultural Society.</p>
-      <p>27 July 1911: Further Deed of Grant for Additional Drostdy Grounds Signed by Governor Lord Sydney Buxton</p>
-      <p>
-        As it became apparent that the grounds allocated in 1910 were too small for an agricultural exhibition, the Worcester Agricultural Society secured an additional piece of land. This further deed of grant was signed on 27 July 1911 by Governor Lord Sydney Buxton, transferring a piece of land called ‘The Show Ground Extension,’ measuring 1 morgen, 206 square roods, and 122 square feet, to the Worcester Agricultural Society.
-      </p>
-      <p>1911 – 1943: The ‘Old Gaol’ Used as Residence for the Secretary of the Worcester Agricultural Society</p>
-      <p>1911 – 1925: Further Eight Morgen of Land Transferred by Worcester Municipality to Worcester Agricultural Society</p>
-      <p>1920s: Demolition of ‘Old Langerug’ Homestead, ‘Oude Post’</p>
-      <p>1943 – 30 June 1946: Italian Prisoner-of-War Camp on the Worcester Agricultural Show Grounds, and the ‘Old Gaol’ Used as Administrative Offices</p>
-      <p>October 1946: Auction of Italian Prisoner-of-War Camp Structures and Items</p>
-      <p>1946 – 1971: The ‘Old Gaol’ Used as Storage, Meeting Place, and Later Clubhouse for the Worcester Agricultural Society</p>
-      <p>27 November 1969: Worcester Agricultural Society Decides to Relocate from Old Show Grounds to Kleinplasie</p>
-      <p>6 March 1971: Last Event on the Old Show Grounds</p>
-      <p>Compiled by: Councillor Dr Dr Julian Kritzinger</p>
-    </div>
-  </div>
-</motion.div>
 
           
             {/* Continue with the rest of your existing sections... */}

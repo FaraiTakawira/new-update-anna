@@ -49,23 +49,34 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Categories */}
-          <div>
-            <h4 className="font-medium mb-4 md:mb-6 text-gold text-sm md:text-base">Kategorieë</h4>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
-             
-              <li>
-                <Link to="/news#art" className="hover:text-gold transition-colors">
-                  Plaaslike Kuns & Kultuur
-                </Link>
-              </li>
-              <li>
-                <Link to="/news#projects" className="hover:text-gold transition-colors">
-                  Gemeenskap & Ondersteuning
-                </Link>
-              </li>
-            </ul>
-          </div>
+        
+       {/* Categories */}
+<div>
+  <h4 className="font-medium mb-4 md:mb-6 text-gold text-sm md:text-base">Kategorieë</h4>
+  <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+    <li>
+      <Link to="/history" className="hover:text-gold transition-colors">
+        Geskiedenis
+      </Link>
+    </li>
+    <li>
+      <Link to="/news#art" className="hover:text-gold transition-colors">
+        Plaaslike Kuns & Kultuur
+      </Link>
+    </li>
+    <li>
+      <Link to="/news#projects" className="hover:text-gold transition-colors">
+        Gemeenskap & Ondersteuning
+      </Link>
+    </li>
+    <li>
+      <Link to="/news#projects" className="hover:text-gold transition-colors">
+        Jaarverslae
+      </Link>
+    </li>
+  </ul>
+</div>
+
           
           {/* Social Links */}
           <div>

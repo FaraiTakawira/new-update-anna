@@ -47,7 +47,7 @@ const awards = [
     year: "2024"
   },
   {
-    title: "AfriForum Sakenetwerk Tinteltong-toekenning 2025",
+    title: "Wenner AfriForum Sakenetwerk Tinteltong-toekenning 2025",
     organization: "AfriForum Sakenetwerk",
     icon: Gem,
     color: "text-green-600",
